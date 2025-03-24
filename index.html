@@ -150,7 +150,7 @@
         
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
-                <img src="../romance.jpg" class="d-block w-100" alt="Action Movies">
+                <img src="romance.jpg" class="d-block w-100" alt="Action Movies">
                 <div class="carousel-caption">
                     <h2 class="display-4 fw-bold text-shadow">Action & Adventure</h2>
                     <p class="lead mb-4 text-shadow">Experience heart-pounding thrills and epic adventures</p>
@@ -159,7 +159,7 @@
             </div>
             
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="../netfl.webp" class="d-block w-100" alt="Drama Movies">
+                <img src="netfl.webp" class="d-block w-100" alt="Drama Movies">
                 <div class="carousel-caption">
                     <h2 class="display-4 fw-bold text-shadow">Drama & Romance</h2>
                     <p class="lead mb-4 text-shadow">Immerse yourself in compelling stories</p>
@@ -168,7 +168,7 @@
             </div>
             
             <div class="carousel-item" data-bs-interval="5000">
-                <img src="../movie_act.jpg" class="d-block w-100" alt="Comedy Movies">
+                <img src="movie_act.jpg" class="d-block w-100" alt="Comedy Movies">
                 <div class="carousel-caption">
                     <h2 class="display-4 fw-bold text-shadow">Comedy Hits</h2>
                     <p class="lead mb-4 text-shadow">Laugh out loud with our comedy collection</p>
@@ -187,7 +187,7 @@
         </button>
     </div>
 
-    <!-- Add custom styles -->
+    <!-- Update the carousel styles -->
     <style>
         .carousel-item {
             transition: transform 1.2s ease-in-out;
@@ -219,14 +219,30 @@
             filter: brightness(0.8);
             object-fit: cover;
             height: 70vh;
+            width: 100%;
+            max-height: 600px; /* Prevent excessive height */
+            object-position: center;
         }
-        
-        .btn-danger {
-            transition: transform 0.3s ease;
-        }
-        
-        .btn-danger:hover {
-            transform: scale(1.05);
+
+        /* Add responsive breakpoints */
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 50vh;
+                max-height: 400px;
+            }
+            
+            .carousel-caption {
+                padding: 15px;
+                bottom: 10%;
+            }
+            
+            .carousel-caption h2 {
+                font-size: 2rem;
+            }
+            
+            .carousel-caption p {
+                font-size: 1rem;
+            }
         }
     </style>
 
